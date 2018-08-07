@@ -13,9 +13,17 @@ int bane_y_length = 800;
 
 Bane_Objekter [] Objekter_paa_banen;
 
+//Declaring images
+  PImage ratImg;
+
+
 
 
 void setup(){  
+    //Declaring images
+  //ratImg = loadImage("Rat_filler.png");
+  imageloader();
+  
     //Laver arrayes
   Objekter_paa_banen = new Bane_Objekter[0];
   BulletsArray = new Bullets[0];
@@ -48,5 +56,8 @@ void draw(){
   draw_charactor(x,y,rot);
   Bane_Draw();
   
+  //lav denne rigtig
+  image(ratImg, 80, 80);
+    
   
 };

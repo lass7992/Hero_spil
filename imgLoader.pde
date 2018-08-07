@@ -1,1 +1,4 @@
-PImage ratImg = loadImage("Rat_filler.png");
+void imageloader(){
+  ratImg = loadImage("Rat_filler.png");
+
+}
