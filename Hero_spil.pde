@@ -11,16 +11,17 @@ Bullets [] BulletsArray;
 int bane_x_lenght = 0;
 int bane_y_lenght = 0;
 
-//Objekter_på_banen [] Bane_Objekter;
+Bane_Objekter [] Objekter_paa_banen;
 
 
 
 void setup(){  
-  Bane_Creater();
-
-
+    //Laver arrayes
+  Objekter_paa_banen = new Bane_Objekter[0];
   BulletsArray = new Bullets[0];
   
+  
+  Bane_Creater();
   
   size(642,700);
   background(color(200,200,200));
@@ -40,11 +41,12 @@ void draw(){
   
   MovementChecker();
   Bullet_Controller();
-  
-  
-  
   PlayerRotation();
+  
+  
+  //draw
   draw_charactor(x,y,rot);
-
+  Bane_Draw();
+  
   
 };
