@@ -9,23 +9,70 @@ void PlayerRotation(){
   }
 }
 
+boolean Colission_Hero(int dir){
+  boolean able = true;
+  if(dir == 0){
+    for (int i = 0 ; i < Objekter_paa_banen.length; i++){
+      if (Objekter_paa_banen[i].x_pos < x-19  && Objekter_paa_banen[i].x_pos+64 > x-19 && y+16 > Objekter_paa_banen[i].y_pos && y-16 < Objekter_paa_banen[i].y_pos+64 ){
+        able = false;
+      }
+      
+    }
+  }
+  if(dir == 1){
+    for (int i = 0 ; i < Objekter_paa_banen.length; i++){
+      if (Objekter_paa_banen[i].y_pos < y+19  && Objekter_paa_banen[i].y_pos+64 > y+19 && x+16 > Objekter_paa_banen[i].x_pos && x-16 < Objekter_paa_banen[i].x_pos+64 ){
+        able = false;
+      }
+      
+    }
+  }
+  if(dir == 2){
+    for (int i = 0 ; i < Objekter_paa_banen.length; i++){
+      if (Objekter_paa_banen[i].y_pos < y-19  && Objekter_paa_banen[i].y_pos+64 > y-19 && x+16 > Objekter_paa_banen[i].x_pos && x-16 < Objekter_paa_banen[i].x_pos+64 ){
+        able = false;
+      }
+      
+    }
+  }
+  if(dir == 3){
+    for (int i = 0 ; i < Objekter_paa_banen.length; i++){
+      if (Objekter_paa_banen[i].x_pos < x+19  && Objekter_paa_banen[i].x_pos+64 > x+19 && y+16 > Objekter_paa_banen[i].y_pos && y-16 < Objekter_paa_banen[i].y_pos+64 ){
+        able = false;
+      }
+      
+    }
+  }
+  
+  
+  return(able);
+}
+
 
 void MovementChecker(){
   if( keys[0]) 
   {  
-    x -= 3;
+    if (Colission_Hero(0) == true){
+      x -= 3;
+    }
   }
   if( keys[1]) 
   {
-    y += 3;
+    if (Colission_Hero(1) == true){
+      y += 3;
+    }
   }
   if( keys[2]) 
   {  
-    y -= 3;
+    if (Colission_Hero(2) == true){
+      y -= 3;
+    }
   }
   if( keys[3]) 
   {
-    x += 3;
+    if (Colission_Hero(3) == true){
+      x += 3;
+    }
   }
 }
 
