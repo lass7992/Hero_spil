@@ -1,5 +1,9 @@
 // Add 'Enemy [] Enemies' to Hero_spil
 
+
+// This 
+
+
 class Enemy{
   int posX, posY, spriteW, spriteH, LoS, moveSpeed;
   float rotation;
@@ -10,7 +14,9 @@ class Enemy{
   
   Enemy(PImage image, int LineOfSight, int Xposition, int Yposition, int spriteWidth, int spriteHeight){
     posX = Xposition;
+    targetPosX = Xposition;
     posY = Yposition;
+    targetPosY = Yposition;
     img = image;
     LoS = LineOfSight;
     spriteH = spriteHeight;
@@ -22,30 +28,40 @@ class Enemy{
     
     
     if (playerInLoS()){
-      
+    // Go towards the player  
+      walkTowardsPlayer();
     }
+    
+    
     else{
-    randomWalk();      
+      // Walk towards a random position
+      randomWalk();      
     }
     
     
     image(img, posX, posY, spriteW, spriteH);
-  
+    // Render the new image, with the new position
   
   }
+  
   boolean playerInLoS(){
-    // Activate if player is in raycast of the enemies LoS
+    // Activate if player is in raycast of the enemies LoS. This will have to be done later
     return false;
   }
   
   void walkTowardsPlayer(){
+    // Walk towards the player with the enemy's movespeed.
   }
+  
   void randomWalk(){
+  // Walk towards a random position.
     
+    // If the enemy is at its random target position, generate a new random position.
     if (posX == targetPosX && posY == targetPosY){
       generateNewPosition();
     }
     
+    // Move toward the target position in x and y.
     if (posX > targetPosX){
       posX -= moveSpeed;
     }
@@ -68,11 +84,6 @@ class Enemy{
   targetPosX = int(random(0, bane_x_length)); // Change spelling in normal
   targetPosY = int(random(0, bane_y_length));
   
-  }
-  
-  
-  void setImage(PImage image){
-    img = image;
   }
   
 }
