@@ -11,7 +11,7 @@ Bullets [] BulletsArray;
 int bane_x_lenght = 0;
 int bane_y_lenght = 0;
 
-Objekter_på_banen [] Bane_Objekter;
+//Objekter_på_banen [] Bane_Objekter;
 
 
 
