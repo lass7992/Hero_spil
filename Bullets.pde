@@ -8,6 +8,20 @@ class Bullets{
     Speed = speed;
     
   }
+  
+  boolean collision_detection(){
+    boolean able = true;
+   
+    for (int i = 0 ; i < Objekter_paa_banen.length; i++){
+      if (x_pos > Objekter_paa_banen[i].x_pos && x_pos < Objekter_paa_banen[i].x_pos+64 && y_pos > Objekter_paa_banen[i].y_pos && y_pos < Objekter_paa_banen[i].y_pos+64 ){
+        able = false;
+      }
+      
+    }
+    
+    
+    return(able);
+  }
 
 }
 
@@ -29,9 +43,11 @@ void draw_bullets(){
 
 void movement_bullets(){
   for(int i = 0; i<BulletsArray.length;i++){
-  
-    BulletsArray[i].x_pos += cos(BulletsArray[i].Direction)*BulletsArray[i].Speed;
-    BulletsArray[i].y_pos += sin(BulletsArray[i].Direction)*BulletsArray[i].Speed;
+    if(BulletsArray[i].collision_detection() == false) {  BulletsArray = (Bullets[])concat(subset(BulletsArray,0,i),subset(BulletsArray,i+1,BulletsArray.length-i-1)); }
+    else{
+      BulletsArray[i].x_pos += cos(BulletsArray[i].Direction)*BulletsArray[i].Speed;
+      BulletsArray[i].y_pos += sin(BulletsArray[i].Direction)*BulletsArray[i].Speed;
+    }
   }
   
 }

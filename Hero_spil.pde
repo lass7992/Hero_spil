@@ -8,8 +8,8 @@ boolean[] keys;
 Bullets [] BulletsArray;
 
     //Bane variabler
-int bane_x_lenght = 0;
-int bane_y_lenght = 0;
+int bane_x_lenght = 800;
+int bane_y_lenght = 800;
 
 Bane_Objekter [] Objekter_paa_banen;
 
