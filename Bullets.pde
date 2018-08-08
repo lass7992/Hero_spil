@@ -54,5 +54,8 @@ void movement_bullets(){
 
 
 void mousePressed(){
-  BulletsArray = (Bullets[])append(BulletsArray, new Bullets(x ,y ,rot ,8));
+  if(mp > 0){
+    BulletsArray = (Bullets[])append(BulletsArray, new Bullets(x ,y ,rot ,8));
+    mp -= 10;
+  }
 }

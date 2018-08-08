@@ -4,12 +4,16 @@ int y = 100;
 int rel_x = 0;
 int rel_y = 0;
 float rot = PI;
-int hp = 100;
+int hp = 0;
 int mp = 100;
 
 boolean[] keys;
 
-Bullets [] BulletsArray;
+
+
+    //Game variabler
+float time = 0;
+float past_time = millis();
 
     //Bane variabler
 int bane_x_length = 800;
@@ -17,8 +21,12 @@ int bane_y_length = 800;
 int screen_x = 642;
 int screen_y = 700;
 
+  //Arrays
 Bane_Objekter [] Objekter_paa_banen;
 Enemy [] Enemies;
+Bullets [] BulletsArray;
+
+
 
 //Declaring images
   PImage ratImg;
@@ -62,6 +70,9 @@ void draw(){
   MovementChecker();
   Bullet_Controller();
   PlayerRotation();
+  
+  Time_Controllers();  
+  
   
   
   //draw

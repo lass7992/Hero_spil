@@ -18,13 +18,3 @@ void screen_mover(){
   }
 
 }
-
-
-
-void Hud_Draw(){
-  fill(255-255*(float(hp)/100),255*(float(hp)/100),0);
-  
-  rect(0,0,(float(hp)/100)*128,10);  
-  fill(0,0,255);
-  rect(0,10,float(mp/100)*128,10);  
-}
