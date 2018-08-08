@@ -2,8 +2,8 @@ class Bullets{
   float x_pos, y_pos, Direction, Speed;
   
   Bullets(int x, int y, float dir, int speed){
-    x_pos = x;
-    y_pos = y;
+    x_pos = x+rel_x ;
+    y_pos = y+rel_y;
     Direction = dir;
     Speed = speed;
     
@@ -13,7 +13,7 @@ class Bullets{
     boolean able = true;
    
     for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-      if (x_pos > Objekter_paa_banen[i].x_pos && x_pos < Objekter_paa_banen[i].x_pos+64 && y_pos > Objekter_paa_banen[i].y_pos && y_pos < Objekter_paa_banen[i].y_pos+64 ){
+      if (x_pos > Objekter_paa_banen[i].x_pos-rel_x  && x_pos < Objekter_paa_banen[i].x_pos-rel_x +64 && y_pos > Objekter_paa_banen[i].y_pos-rel_y && y_pos < Objekter_paa_banen[i].y_pos-rel_y +64 ){
         able = false;
       }
       
@@ -36,7 +36,7 @@ void Bullet_Controller(){
 void draw_bullets(){
   for(int i = 0; i<BulletsArray.length;i++){
     fill(100,50,200);
-    ellipse(BulletsArray[i].x_pos,BulletsArray[i].y_pos,8,8);
+    ellipse(BulletsArray[i].x_pos-rel_x ,BulletsArray[i].y_pos-rel_y ,8,8);
   }
   
 }
