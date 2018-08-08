@@ -1,6 +1,5 @@
 void screen_mover(){
-  println (rel_x);
-  println( bane_x_length);
+
   if(x > (screen_x/2) && rel_x < bane_x_length){
     rel_x += x-(screen_x/2);
     x = (screen_x/2);

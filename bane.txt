@@ -2,7 +2,7 @@
 800
 wwwwwwwwwwwwwwwwwwwwww
 wxxwxxxxxxxxxxxxxxxxxw
-wxxwxxxxxxxxxxwxxxxxxw
+wxxwxxxxxrxxxxwxxxrxxw
 wxxwwwwxxxxxxxwxxxxxxw
 wxxxxxwwwwwwwwwddwwwww
 wwxxxxxdxxxxxxxxxxxxxw
@@ -10,14 +10,14 @@ wwwwxxxdxxxxxxxxxxxxxw
 wwwwwwwwwwwwwwwwwwddww
 wwwwwwwwwwwwwwwwwwxxww
 wwwwwwwwwwwwxxxxxxxxww
-wwwwwwwwwwwwxxxxxxxxww
+wwwwwwwwwwwwxxxrxxxxww
 wwwwwwwwwxxxxxxxxxxxww
 wwwwwwwwwxxxxxxxxwwwww
 wwwwwwwwddddddddwwwwww
 wwwwwwwwxxxxxxxxwwwwww
 wwwwwwwwxxxxxxxxwwwwww
 wwwwwwwwxxxxxxxxwwwwww
-wwwwwwwwxxxxxxxxwwwwww
+wwwwwwwwxxxxrxxxwwwwww
 wwwwwwwwxxxxxxxxwwwwww
 wwwwwwwwxxxxxxxxwwwwww
 wwwwwwwwxxxxxxxxwwwwww

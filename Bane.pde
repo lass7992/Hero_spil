@@ -11,7 +11,11 @@ void Bane_Creater(){
       }
       else if(Bane_file[i].charAt(q) == 'd'){
         Objekter_paa_banen = (Bane_Objekter[])append(Objekter_paa_banen, new Bane_Objekter(64*q,64*(i-2),false, "door"));
-      } 
+      }
+      else if(Bane_file[i].charAt(q) == 'r'){
+        Enemies = (Enemy[])append(Enemies , createRat(64*q,64*(i-2)));
+        print(Enemies.length);
+      }
     }
   }  
 

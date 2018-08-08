@@ -1,6 +1,6 @@
-Enemy createRat(){ 
+Enemy createRat(int x,int y){ 
   //ratImg = loadImage("Rat_filler.png");
-  Enemy rat = new Enemy(ratImg, 400, 0, 0, 32, 32);
+  Enemy rat = new Enemy(ratImg, 400, x, y, 32, 32);
   return rat;
   
   

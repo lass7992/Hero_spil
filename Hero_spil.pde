@@ -18,6 +18,7 @@ int screen_x = 642;
 int screen_y = 700;
 
 Bane_Objekter [] Objekter_paa_banen;
+Enemy [] Enemies;
 
 //Declaring images
   PImage ratImg;
@@ -33,6 +34,7 @@ void setup(){
     //Laver arrayes
   Objekter_paa_banen = new Bane_Objekter[0];
   BulletsArray = new Bullets[0];
+  Enemies = new Enemy[0];
   
   
   Bane_Creater();
@@ -68,7 +70,7 @@ void draw(){
   Hud_Draw();
   
   //lav denne rigtig
-  image(ratImg, 80-rel_x, 80-rel_y);
+  ememy_Draw();
     
   
 };
