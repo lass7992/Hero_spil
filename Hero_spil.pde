@@ -68,7 +68,7 @@ void draw(){
   Hud_Draw();
   
   //lav denne rigtig
-  image(ratImg, 80, 80);
+  image(ratImg, 80-rel_x, 80-rel_y);
     
   
 };

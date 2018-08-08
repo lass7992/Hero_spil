@@ -13,7 +13,7 @@ boolean Colission_Hero(int dir){
   boolean able = true;
   if(dir == 0){
     for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-      if (Objekter_paa_banen[i].x_pos< x-19  && Objekter_paa_banen[i].x_pos+64 > x-19 && y+16 > Objekter_paa_banen[i].y_pos && y-16 < Objekter_paa_banen[i].y_pos+64 ){
+      if (Objekter_paa_banen[i].x_pos-rel_x < x-19  && Objekter_paa_banen[i].x_pos-rel_x+64 > x-19 && y+16 > Objekter_paa_banen[i].y_pos-rel_y && y-16 < Objekter_paa_banen[i].y_pos-rel_y+64  && Objekter_paa_banen[i].Solid == true){
         able = false;
       }
       
@@ -21,7 +21,7 @@ boolean Colission_Hero(int dir){
   }
   if(dir == 1){
     for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-      if (Objekter_paa_banen[i].y_pos-rel_y < y+19  && Objekter_paa_banen[i].y_pos-rel_y+64 > y+19 && x+16 > Objekter_paa_banen[i].x_pos-rel_x && x-16 < Objekter_paa_banen[i].x_pos-rel_x+64 ){
+      if (Objekter_paa_banen[i].y_pos-rel_y < y+19  && Objekter_paa_banen[i].y_pos-rel_y+64 > y+19 && x+16 > Objekter_paa_banen[i].x_pos-rel_x && x-16 < Objekter_paa_banen[i].x_pos-rel_x+64 && Objekter_paa_banen[i].Solid == true){
         able = false;
       }
       
@@ -29,7 +29,7 @@ boolean Colission_Hero(int dir){
   }
   if(dir == 2){
     for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-      if (Objekter_paa_banen[i].y_pos-rel_y < y-19  && Objekter_paa_banen[i].y_pos-rel_y+64 > y-19 && x+16 > Objekter_paa_banen[i].x_pos-rel_x && x-16 < Objekter_paa_banen[i].x_pos-rel_x+64 ){
+      if (Objekter_paa_banen[i].y_pos-rel_y < y-19  && Objekter_paa_banen[i].y_pos-rel_y+64 > y-19 && x+16 > Objekter_paa_banen[i].x_pos-rel_x && x-16 < Objekter_paa_banen[i].x_pos-rel_x+64 && Objekter_paa_banen[i].Solid == true){
         able = false;
       }
       
@@ -37,7 +37,7 @@ boolean Colission_Hero(int dir){
   }
   if(dir == 3){
     for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-      if (Objekter_paa_banen[i].x_pos-rel_x < x+19  && Objekter_paa_banen[i].x_pos-rel_x+64 > x+19 && y+16 > Objekter_paa_banen[i].y_pos-rel_y && y-16 < Objekter_paa_banen[i].y_pos-rel_y+64 ){
+      if (Objekter_paa_banen[i].x_pos-rel_x < x+19  && Objekter_paa_banen[i].x_pos-rel_x+64 > x+19 && y+16 > Objekter_paa_banen[i].y_pos-rel_y && y-16 < Objekter_paa_banen[i].y_pos-rel_y+64 && Objekter_paa_banen[i].Solid == true){
         able = false;
       }
       

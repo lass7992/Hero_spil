@@ -13,7 +13,7 @@ class Bullets{
     boolean able = true;
    
     for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-      if (x_pos > Objekter_paa_banen[i].x_pos-rel_x  && x_pos < Objekter_paa_banen[i].x_pos-rel_x +64 && y_pos > Objekter_paa_banen[i].y_pos-rel_y && y_pos < Objekter_paa_banen[i].y_pos-rel_y +64 ){
+      if (x_pos > Objekter_paa_banen[i].x_pos  && x_pos < Objekter_paa_banen[i].x_pos +64 && y_pos > Objekter_paa_banen[i].y_pos && y_pos < Objekter_paa_banen[i].y_pos +64 && Objekter_paa_banen[i].Solid == true){
         able = false;
       }
       

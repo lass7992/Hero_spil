@@ -6,9 +6,12 @@ void Bane_Creater(){
   
   for (int i = 2 ; i < Bane_file.length; i++) {
     for (int q = 0 ; q < Bane_file[i].length(); q++) {
-      if (Bane_file[i].charAt(q) == 'o'){
-        Objekter_paa_banen = (Bane_Objekter[])append(Objekter_paa_banen, new Bane_Objekter(64*q,64*(i-2),true, "Tree"));
+      if (Bane_file[i].charAt(q) == 'w'){
+        Objekter_paa_banen = (Bane_Objekter[])append(Objekter_paa_banen, new Bane_Objekter(64*q,64*(i-2),true, "wall"));
       }
+      else if(Bane_file[i].charAt(q) == 'd'){
+        Objekter_paa_banen = (Bane_Objekter[])append(Objekter_paa_banen, new Bane_Objekter(64*q,64*(i-2),false, "door"));
+      } 
     }
   }  
 
@@ -32,6 +35,13 @@ class Bane_Objekter{
 
 void Bane_Draw(){
   for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-    rect(Objekter_paa_banen[i].x_pos-rel_x,Objekter_paa_banen[i].y_pos-rel_y, 64,64);
+    if(Objekter_paa_banen[i].type == "wall"){
+      fill(100,100,100);
+      rect(Objekter_paa_banen[i].x_pos-rel_x,Objekter_paa_banen[i].y_pos-rel_y, 64,64);
+    }
+    else if(Objekter_paa_banen[i].type == "door"){
+      fill(50,50,200);
+      rect(Objekter_paa_banen[i].x_pos-rel_x,Objekter_paa_banen[i].y_pos-rel_y, 64,64);
+    }
   }
 }
