@@ -12,7 +12,7 @@ class Enemy{
   
   // walking
   
-  Enemy(PImage image, int LineOfSight, int Xposition, int Yposition, int spriteWidth, int spriteHeight){
+  Enemy(PImage image, int LineOfSight, int Xposition, int Yposition, int spriteWidth, int spriteHeight, int Speed){
     posX = Xposition;
     targetPosX = Xposition;
     posY = Yposition;
@@ -21,6 +21,7 @@ class Enemy{
     LoS = LineOfSight;
     spriteH = spriteHeight;
     spriteW = spriteWidth;
+    moveSpeed = Speed;
   }
   
   void update(){
@@ -39,7 +40,7 @@ class Enemy{
     }
     
     
-    image(img, posX, posY, spriteW, spriteH);
+    image(img, posX-rel_x, posY-rel_y, spriteW, spriteH);
     // Render the new image, with the new position
   
   }
@@ -73,8 +74,12 @@ class Enemy{
       posY -= moveSpeed;
     }
     else{
+       println(posY);
+       println(moveSpeed);
       posY += moveSpeed;
+      println(posY);
     }
+        
     
     
   }
@@ -83,6 +88,7 @@ class Enemy{
   // Generate new X and Y
   targetPosX = int(random(0, bane_x_length)); // Change spelling in normal
   targetPosY = int(random(0, bane_y_length));
+  println("target pos x: " + targetPosX );
   
   }
   

@@ -11,8 +11,6 @@ void draw_charactor(int x, int y, float rot){
 
 void ememy_Draw(){
   for (int i = 0 ; i < Enemies.length; i++){
-    if(Enemies[i].img == ratImg){
-      image(ratImg, Enemies[i].posX-rel_x, Enemies[i].posY-rel_y);
-    }
+    Enemies[i].update();
   }
 }
