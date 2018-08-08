@@ -32,6 +32,6 @@ class Bane_Objekter{
 
 void Bane_Draw(){
   for (int i = 0 ; i < Objekter_paa_banen.length; i++){
-    rect(Objekter_paa_banen[i].x_pos,Objekter_paa_banen[i].y_pos, 64,64);
+    rect(Objekter_paa_banen[i].x_pos-rel_x,Objekter_paa_banen[i].y_pos-rel_y, 64,64);
   }
 }
