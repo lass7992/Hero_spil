@@ -1,0 +1,16 @@
+void bane_generator(){
+  int bane_x = int(random(500,1000));
+  int bane_y = int(random(500,1000));
+  println(bane_x);
+  println(bane_y);
+  
+  PrintWriter output;
+
+  output = createWriter("positions.txt"); 
+  output.println(bane_x); // Write the coordinate to the file
+  output.println(bane_y);
+  
+  output.flush(); // Writes the remaining data to the file
+  output.close(); // Finishes the file
+
+}

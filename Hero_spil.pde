@@ -36,6 +36,9 @@ Vision [] Invisible_Area;
 
 
 void setup(){  
+  //generere en bane
+  bane_generator();
+  
     //Declaring images
   //ratImg = loadImage("Rat_filler.png");
   imageloader();
