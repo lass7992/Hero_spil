@@ -11,6 +11,7 @@ void draw_charactor(int x, int y, float rot){
 
 void ememy_Draw(){
   for (int i = 0 ; i < Enemies.length; i++){
+<<<<<<< HEAD
     if(Enemies[i].img == ratImg){
       imagerotation(Enemies[i].posX,Enemies[i].posY);
       image(ratImg, Enemies[i].posX-rel_x, Enemies[i].posY-rel_y);
@@ -40,3 +41,8 @@ void fog_Draw(){
     rect(Invisible_Area[i].x_pos-rel_x,Invisible_Area[i].y_pos-rel_y,64,64); 
   }
 }
+=======
+    Enemies[i].update();
+  }
+}
+>>>>>>> Enemy
