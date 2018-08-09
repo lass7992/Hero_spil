@@ -14,7 +14,9 @@ void Bane_Creater(){
       }
       else if(Bane_file[i].charAt(q) == 'r'){
         Enemies = (Enemy[])append(Enemies , createRat(64*q,64*(i-2)));
-        print(Enemies.length);
+      }
+      if(Bane_file[i].charAt(q) != 'w' && Bane_file[i].charAt(q) != 'd'){
+        Invisible_Area = (Vision[])append(Invisible_Area, new Vision(64*q,64*(i-2)));
       }
     }
   }  

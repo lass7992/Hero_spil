@@ -32,3 +32,11 @@ void Hud_Draw(){
   fill(0,0,255);
   rect(0,10,(float(mp)/100)*128,10);  
 }
+
+
+void fog_Draw(){
+  for (int i = 0 ; i < Invisible_Area.length; i++){
+    fill(0,0,0);
+    rect(Invisible_Area[i].x_pos-rel_x,Invisible_Area[i].y_pos-rel_y,64,64); 
+  }
+}

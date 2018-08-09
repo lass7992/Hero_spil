@@ -25,6 +25,7 @@ int screen_y = 700;
 Bane_Objekter [] Objekter_paa_banen;
 Enemy [] Enemies;
 Bullets [] BulletsArray;
+Vision [] Invisible_Area;
 
 
 
@@ -43,7 +44,7 @@ void setup(){
   Objekter_paa_banen = new Bane_Objekter[0];
   BulletsArray = new Bullets[0];
   Enemies = new Enemy[0];
-  
+  Invisible_Area = new Vision[0];
   
   Bane_Creater();
   
@@ -82,6 +83,11 @@ void draw(){
   
   //lav denne rigtig
   ememy_Draw();
+  
+  
+  //tegner fog
+  fog_Collision();
+  fog_Draw();
     
   
 };
