@@ -120,3 +120,9 @@ String [][] wall_generator(int target_x, int target_y, String [][] temp_Bane){
   return temp_Bane;
 
 }
+
+
+
+
+
+/// sæt et punk et sted i banen og går noget nice :3
