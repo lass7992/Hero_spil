@@ -50,7 +50,7 @@ void setup(){
   
     //generere en bane og derefter indlæser den den
   bane_generator();
-  Bane_Creater("positions.txt"); //skriv navnet på filen der skal indlæses
+  Bane_Creater("bane.txt"); //skriv navnet på filen der skal indlæses
   
   size(10,10);
   surface.setSize(screen_x, screen_y);

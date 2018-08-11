@@ -11,7 +11,13 @@ void draw_charactor(int x, int y, float rot){
 
 void ememy_Draw(){
   for (int i = 0 ; i < Enemies.length; i++){
+  pushMatrix();
+    //translate(Enemies[i].posX-rel_x, Enemies[i].posY-rel_y);    
+    //rotate(1);
     Enemies[i].update();
+  popMatrix();
+
+    
   }
 }
 
