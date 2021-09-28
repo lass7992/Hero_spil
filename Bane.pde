@@ -1,5 +1,5 @@
-void Bane_Creater(){
-  String[] Bane_file = loadStrings("bane.txt");
+void Bane_Creater(String file_name){
+  String[] Bane_file = loadStrings(file_name);
   bane_x_length = int(Bane_file[0]);
   bane_y_length = int(Bane_file[1]);
 

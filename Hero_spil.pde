@@ -36,6 +36,8 @@ Vision [] Invisible_Area;
 
 
 void setup(){  
+
+  
     //Declaring images
   //ratImg = loadImage("Rat_filler.png");
   imageloader();
@@ -46,7 +48,9 @@ void setup(){
   Enemies = new Enemy[0];
   Invisible_Area = new Vision[0];
   
-  Bane_Creater();
+    //generere en bane og derefter indlæser den den
+  bane_generator();
+  Bane_Creater("bane.txt"); //skriv navnet på filen der skal indlæses
   
   size(10,10);
   surface.setSize(screen_x, screen_y);
